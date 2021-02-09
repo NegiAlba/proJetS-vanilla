@@ -44,3 +44,5 @@ todoList.addEventListener('click', (e)=>{
         console.log(button.parentNode.textContent);
     }
 })
+
+//! Update pour un commit
