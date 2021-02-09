@@ -118,10 +118,34 @@ main{
     transform: rotate(360deg);
 }
 
-/* TEMPLATE DE LA SECTION CENTRALE */
-
 .container{
     display:flex;
     justify-content:center;
     align-items:center;
+    height:100vh;
+}
+/* TEMPLATE DE LA SECTION CENTRALE COLOR PICKER */
+
+.container{
+    flex-direction: column;
+}
+
+#input-color{
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    height: 50px;
+    border-radius: 5px;
+    border:2px solid white;
+    font-size:1.5rem;
+    text-align:center;
+}
+
+#color-randomizer{
+    height: 50px;
+    border-radius: 5px;
+    border:2px solid white;
+    font-size:1rem;
+    padding:0.5rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
