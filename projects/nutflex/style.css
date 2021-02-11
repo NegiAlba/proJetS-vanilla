@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 960px;
+    background: #33334d;
+    color: #222;
+    line-height: normal;
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+  
+  a,
+  a:hover {
+    color: #33334d;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 0px 9px 4px rgba(0, 0, 0, 0.1), 0 -5px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 580px;
+  }
+  nav .logo {
+    position: relative;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  nav .logo img{
+      margin-top:10px;
+      height:35px;
+  }
+  nav .logo:hover {
+    background: #9494b8;
+  }
+  nav .links {
+    float: right;
+    margin-right: 30px;
+    position: relative;
+  }
+  nav .links li {
+    float: left;
+    list-style: none;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+  }
+  nav .links li > a {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 20px;
+    height: 30px;
+  }
+  nav .links li > a:hover {
+    color: #fff;
+    background: #33334d;
+    border-radius: 2px;
+  }
+  nav .links li > a[class^=trigger-] {
+    padding-right: 40px;
+  }
+  nav .links li > a .arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 35%;
+    text-align: center;
+    right: 10px;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3) transparent;
+  }
+  nav .links li > a .arrow:after {
+    content: "";
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    top: -10px;
+    left: -15px;
+    position: absolute;
+    height: 15px;
+  }
+  nav .links li ul {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    display: none;
+  }
+  nav .links li ul > li {
+    clear: both;
+    list-style: none;
+    display: block;
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+  }
+  nav .links li ul > li:hover {
+    background: #9494b8;
+  }
+  nav .links li ul > li:hover > a {
+    background: #9494b8;
+    color: #fff;
+  }
+  nav .links li:hover > .drop {
+    display: block;
+    animation: fadeInRight 0.3s ease;
+    -webkit-animation: fadeInRight 0.3s ease;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  main{
+      margin-top:75px;
+  }
+
+  /* Cards */
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat center/80% #555 url("https://m.media-amazon.com/images/M/MV5BNzRlNGUzMmEtYTg0Ni00N2U2LTg4YWEtNDdlNmMwYjBlZDQ0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY1200_CR90,0,630,1200_AL_.jpg");
+    font-size: 1rem;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .container {
+    display: grid;
+    gap: 1rem;
+
+    /* 1 too skinny, too much code */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  
+    /* 2 cleaner code */
+    /* grid-template-columns: repeat(12, 1fr); */
+  
+    /* 3  better sizing, but overflows */
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+  
+    /* 4 final */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+ }
+#card-overlay{
+    background:rgba(0,0,0,0.5);
+    text-align: center;
+}
+ #card-img img{
+    width:200px;
+    height:380px;
+ }
+
+ #card-buttons{
+     width:100%;
+ }
+ #card-buttons button{
+     border:none;
+     background-color:transparent;
+     margin:0 1.25rem;
+     width:35%;
+     transition:0.25s;
+ }
+
+ #card-trailer{
+     color:turquoise;
+ }
+ #card-trailer:hover{
+     background-color:turquoise;
+     color:antiquewhite;
+ }
+ #card-favorite{
+     color:red;
+ }
+ #card-favorite:hover{
+     background-color:red;
+     color:white;
+ }
+
+ 
